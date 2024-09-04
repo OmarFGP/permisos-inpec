@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/Imagenes/IcoP.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <title>Solicitud de Permisos</title>
+</head>
+<body style="min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto;">
+<header>
+  <!-- Navbar con Bootstrap -->
+  <nav class="navbar navbar-expand-lg  bg-primary">
+    
+    <div class="coantainer container-fluid">  
+      <!-- Logo o imagen en la navbar -->
+      <div class="d-flex align-items-center gap-3">
+        <img src="./Imagenes/InpecWeb.jpg" alt="Logo INPEC" width="100px">
+        <h1 class="text-white" >Permisos INPEC</h1>
+      </div>
+    </div>   
+    
+    <!-- Menú de navegación colapsable (dropdown) -->
+    <div class="navbar-collapse m-3" >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <!-- Enlace de navegación -->
+          <a class="nav-link active fs-3 text-dark " aria-current="page" href="index.html">Home</a>
+        </li>
+        
+        <!-- Dropdown (desplegable) -->
+        <li class="nav-item dropdown">
+          <!-- Enlace que activa el dropdown -->
+          <a class="nav-link dropdown-toggle fs-3 text-white" href="#" role="button" 
+              data-bs-toggle="dropdown" aria-expanded="false">
+            Bienvenido Usuario
+          </a>
+          <!-- Menú desplegable con enlaces -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="perfil.html">Mi perfil</a></li>
+            <li><a class="dropdown-item" href="inicio-sesion.html">Cerrar Sesion</a></li>
+          </ul>
+        </li>          
+      </ul>        
+    </div>
+  </nav>
+</header>
+
+<div class="main">
+  <div class="container mt-5 text-white">
+    <!-- Se agrega novalidate para que el navegador NO valide, sino lo haga bootstrap-->
+    <h1 class="text-center text-primary mb-3" style="font-weight: 800;" >SOLICITUD DE PERMISOS</h1>
+    <form>
+        
+        <!--4 Input tipo Texto en 4 columnas de 3-->
+        <div class="row">
+          <div class="col-md-3 mb-3">
+              <label class="form-label" for="input_name">Primer Nombre:</label>
+              <input type="text" id="input_name" class="form-control" value="Omar" readonly>
+          </div>
+          <div class="col-md-3 mb-3">
+              <label class="form-label" for="input_secondname">Segundo Nombre:</label>
+              <input type="text" id="input_secondname" class="form-control" value="Fernando" readonly>
+          </div>
+          <div class="col-md-3 mb-3">
+              <label class="form-label" for="input_firstlastname">Primer Apellido:</label>
+              <input type="text" id="input_firstlastname" class="form-control" value="Gómez" readonly>
+          </div>
+          <div class="col-md-3 mb-3">
+              <label class="form-label" for="input_secondlastname">Segundo Apellido:</label>
+              <input type="text" id="input_secondlastname" class="form-control" value="Portilla" readonly>
+          </div>
+        </div>
+      
+        
+        <div class="row">
+
+          <div class="col-md-8">
+            <label class="form-label" for="input_email">Email:</label>
+            <div class="input-group mb-3">    
+                <span class="input-group-text">@</span>
+                <input type="email" id="input_email" class="form-control" value="ofgp2014@gmail.com" readonly>                
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label class="form-label" for="cargo">Cargo o Rango:</label>
+            <select id="cargo" class="form-select mb-3">
+                <option value="" selected disabled>Seleccione un cargo</option>
+                <option value="dragoneante">Dragoneante</option>
+                <option value="distinguido">Distinguido</option>
+                <option value="inspector">Inspector</option>
+                <option value="inspector-jefe">Inspector Jefe</option>
+                <option value="teniente">Teniente</option>
+                <option value="capitan">Capitán</option>
+                <option value="mayor">Mayor</option>
+                <option value="administrativo">Administrativo</option>
+            </select>
+          </div>
+       
+        </div>
+        
+        <!--4 columnas con input de horas solicitadas, fechas inicio, fecha fin y motivo del permiso-->
+        <div class="row">
+
+          <div class="col-md-3">
+            <label class="form-label" for="input_hours">Horas Solicitadas:</label>
+            <div class="input-group mb-3">
+              <input type="text" id="input_hours" class="form-control">
+              <span class="input-group-text">Horas</span>
+            </div>
+          </div>
+        
+          <div class="col-md-3 mb-3">
+            <label class="form-label" for="fechaInicio">Fecha Inicio:</label>
+            <input type="date" id="fechaInicio" class="form-control">                    
+          </div>
+        
+          <div class="col-md-3 mb-3">
+            <label class="form-label" for="fechaFin">Fecha Fin:</label>
+            <input type="date" id="fechaFin" class="form-control">                    
+          </div>
+        
+          <div class="col-md-3 mb-3">
+            <label class="form-label" for="motivo">Motivo del permiso:</label>
+            <select id="motivo" class="form-select mb-3">
+                <option value="" selected disabled>Seleccione un motivo</option>
+                <option value="personal">Personal</option>
+                <option value="judicial">Judicial</option>
+                <option value="salud">Salud</option>
+                <option value="opcion 1">opcion 1</option>
+                <option value="opcion 2">opcion 2</option>
+                <option value="opcion 3">opcion 3</option>
+                <option value="opcion 4">opcion 4</option>
+                <option value="opcion 5">opcion 5</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- 3 columnas, un seleccionador de compañia, area de trabajo y opcion para adjuntar archivos si es necesario-->
+        <div class="row">  
+
+          <div class="col-md-4 mb-3">
+            <label class="form-label" for="compañia">Compañia:</label>
+            <select id="compañia" class="form-select mb-3">
+                <option value="" selected disabled>Seleccione su Cia.</option>
+                <option value="cordoba">Cordoba</option>
+                <option value="santander">Santander</option>
+                <option value="bolivar">Bolivar</option>
+                <option value="nariño">Nariño</option>
+                <option value="caldas">Caldas</option>
+                <option value="administrativo">Administrativo</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label" for="input_hours">Area de Trabajo:</label>
+            <div class="input-group mb-3">
+              <input type="text" id="input_hours" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label class="form-label" for="archivo">Adjuntar Archivo:</label>
+            <input type="file" id="archivo" class="form-control" accept=".jpg, .jpeg, .png, .pdf">
+            <small class="form-text text-white">Por favor, adjunte una copia clara de su documento en formato JPG, JPEG, PNG o PDF.</small>
+        </div>
+        
+
+        </div>
+         
+        <!--Un text area solito. Completamente centrado y de ancho completo-->
+        <label class="form-label" for="input_email">Permiso a usar:</label>
+        <div class="input-group mb-3">    
+            <input type="text" id="input_tipo" class="form-control">                
+        </div>
+  
+
+        <!-- Boton de tamaño grande (lg) y centrados por un div (No use columnas)-->
+        <div class="text-center mt-5">
+
+            <button type="submit" class="btn btn-primary btn-lg me-2 border border-secondary rounded-pill">Solicitar</button>
+
+            <button type="reset" class="btn btn-secondary btn-lg ms-2 border border-primary rounded-pill">Cancelar</button>
+
+        </div>
+
+      </form>
+
+  </div>
+
+  <footer>
+    <hr class="text-white">
+    <div class="text-center mb-2 text-white-50 mt-5">
+      <p>
+        Copyright 2024 / Desarrollado por
+          <strong>Omar Gomez</strong>
+      </p>
+    </div>
+
+    <div class="text-center">
+
+      <ul class="list-unstyled list-inline">
+        <li class="list-inline-item">
+          <a href="https://github.com/OmarFGP" class="text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" style="color: rgb(4, 181, 252);" class="bi bi-github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+          </svg></a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="https://www.linkedin.com/in/omar-gomez-407232315/" class="text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" style="color: rgb(4, 181, 252);" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+          </svg></a>
+        </li>
+        
+        <li class="list-inline-item">
+          <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" style="color: rgb(4, 181, 252);" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+          </svg></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<!-- Scripts de Bootstrap para funcionalidad -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

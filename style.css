@@ -1,0 +1,42 @@
+.main{
+    background: linear-gradient(rgba(0, 5, 49, 0.75), rgba(0, 5, 49, 0.75)),
+    url(./Imagenes/COJAMUNDI.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+@media (max-width: 1000px){
+    table{
+        font-size: 0.9rem;
+    }
+    
+}
+
+@media (max-width: 769px) {
+    table{
+        font-size: 0.9rem;
+    }
+
+    table tr{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    table td[data-titulo]{
+        display: flex;
+    }
+    
+    table td[data-titulo]::before{
+        content: attr(data-titulo);
+        width: 120px;
+        font-weight: bold;
+    
+    }
+    
+    table thead{
+        display: none;
+    }
+
+}
